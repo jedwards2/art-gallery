@@ -1,5 +1,6 @@
 import { useParams, Route } from "react-router-dom";
 import ArtImageTile from "../ArtImageTile/index.js";
+import ArtDescription from "../ArtDescription/index.js";
 
 function GalleryView(props) {
   let { galleryId } = useParams();
@@ -14,6 +15,9 @@ function GalleryView(props) {
       <h2>{gallery.name}</h2>
       <Route exact path="/galleries/:galleryId">
         {imageTiles}
+      </Route>
+      <Route exact path="/galleries/:galleryId/art/:artId">
+        <ArtDescription gallery={gallery} />
       </Route>
     </div>
   );
