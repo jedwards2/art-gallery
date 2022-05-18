@@ -7,14 +7,17 @@ function GalleryNavigation(props) {
   return (
     <nav>
       <h1>Galleries</h1>
-      <NavLink to="/" exact>
-        Home{" "}
-      </NavLink>
-      {galleries.map((gallery) => (
-        <NavLink key={gallery.id} to={"/galleries/" + gallery.id}>
-          {gallery.name + " "}
+      <div className="gallery-div">
+        <NavLink to="/" exact>
+          Home{"   "}
         </NavLink>
-      ))}
+
+        {galleries.map((gallery) => (
+          <NavLink key={gallery.id} to={"/galleries/" + gallery.id}>
+            {gallery.name + " "}
+          </NavLink>
+        ))}
+      </div>
     </nav>
   );
 }
