@@ -2,9 +2,12 @@ import { Link, useParams } from "react-router-dom";
 
 function ArtDescription(props) {
   let gallery = props.gallery;
-  let { artid } = useParams();
-  let artwork = gallery.objects[0];
-  console.log(gallery);
+  let { artId } = useParams();
+
+  let artwork = gallery.objects.find((obj) => obj.id === parseInt(artId));
+  // console.log(test);
+  // let artwork = gallery.objects[0];
+
   return (
     <div>
       {artwork.images.map((img) => (

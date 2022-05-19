@@ -5,7 +5,7 @@ function GalleryNavigation(props) {
   let galleries = props.galleries;
 
   return (
-    <nav>
+    <nav className="gallery-nav">
       <h1>Galleries</h1>
       <div className="gallery-div">
         <NavLink to="/" exact>
