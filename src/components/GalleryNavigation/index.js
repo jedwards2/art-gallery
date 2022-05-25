@@ -8,12 +8,16 @@ function GalleryNavigation(props) {
     <nav className="gallery-nav">
       <h1>Galleries</h1>
       <div className="gallery-div">
-        <NavLink to="/" exact>
+        <NavLink to="/" exact className="nav-link">
           Home{"   "}
         </NavLink>
 
         {galleries.map((gallery) => (
-          <NavLink key={gallery.id} to={"/galleries/" + gallery.id}>
+          <NavLink
+            key={gallery.id}
+            to={"/galleries/" + gallery.id}
+            className="nav-link"
+          >
             {gallery.name + " "}
           </NavLink>
         ))}
